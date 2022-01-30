@@ -4,7 +4,10 @@
  */
 
 // Register the widget
-add_action( 'widgets_init', create_function( '', 'return register_widget("Codilight_Lite_Widget_Block_3");'));
+add_action( 'widgets_init', 'codilight_lite_register_widget_block_3' );
+function codilight_lite_register_widget_block_3() {
+	register_widget( 'Codilight_Lite_Widget_Block_3' );
+}
 
 // The widget class
 class Codilight_Lite_Widget_Block_3 extends WP_Widget {
@@ -70,7 +73,7 @@ class Codilight_Lite_Widget_Block_3 extends WP_Widget {
 			if ( $block_category ) {
 				echo $args['before_title'];
 	            ?>
-	            <a href="<?php echo esc_url( get_category_link( $block_category ) ); ?>"><?php echo esc_attr(get_cat_name( $block_category ) ); ?></a>
+	            <a href="<?php echo esc_url( get_category_link( $block_category ) ); ?>"><?php echo esc_html(get_cat_name( $block_category ) ); ?></a>
 	            <?php
 	            echo $args['after_title'];
 			}
