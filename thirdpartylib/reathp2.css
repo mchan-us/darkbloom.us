@@ -1,0 +1,8 @@
+/* .mobile-navigation.mobile-nav-open {
+	top: 89px;
+}
+*/
+.topbar-elements .dropdown-content {
+    display: none;
+    width: 100%;
+}

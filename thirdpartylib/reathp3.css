@@ -1,0 +1,8 @@
+.site-topbar {
+	top: 0px;
+	position: fixed;
+}
+/* upside logo margin */
+.site-header {
+    margin-top: 6rem;
+}

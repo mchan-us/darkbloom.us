@@ -1,0 +1,12 @@
+/* .topbar-elements .dropdown-content {
+    display: none;
+    position: fixed;
+} */
+.site-topbar {
+	top: 32px;
+	position: fixed;
+}
+/* upside logo margin */
+.site-header {
+    margin-top: 6rem;
+}

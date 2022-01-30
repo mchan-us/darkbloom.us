@@ -12,12 +12,25 @@
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
+<?php wp_head(); ?>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-
-<?php wp_head(); ?>
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR|Oxygen&display=swap" rel="stylesheet">
+<?php 
+	require_once 'thirdpartylib/mobiledetect/Mobile_Detect.php';
+	$detect = new Mobile_Detect;
+	if ( $detect->isMobile() && is_user_logged_in() ) {
+  		echo '<link rel="stylesheet" href="//www.mchan.us/wp-content/themes/mus-codilight/thirdpartylib/reathp2.css">';
+	} elseif ( $detect->isMobile() && !is_user_logged_in() ) {
+  		echo '<link rel="stylesheet" href="//www.mchan.us/wp-content/themes/mus-codilight/thirdpartylib/reathp.css">';
+	} elseif ( is_user_logged_in() ) {
+		echo '<link rel="stylesheet" href="//www.mchan.us/wp-content/themes/mus-codilight/thirdpartylib/reathp4.css">';
+	} else {
+		echo '<link rel="stylesheet" href="//www.mchan.us/wp-content/themes/mus-codilight/thirdpartylib/reathp3.css">';
+	}
+?>
 </head>
 
 <body <?php body_class(); ?>>
