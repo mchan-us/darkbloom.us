@@ -1,9 +1,17 @@
 ====================================================================
 CHANGELOG
 ====================================================================
+## mchan.us Darkbloom.us v2.0
+* Testing with PHP 8.0.
+
 ## 1.0.9
 * Fix wrong image size in the_post_thumbnail.
 * Fix wrong condition check function exists.
+
+## mchan.us Codilight v1.0, v1.1
+* Added global shadows to the main block.
+* Footer design modifications.
+* Color design correction.
 
 ## 1.0.8
 * Add demo importer.
